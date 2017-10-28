@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update && \
     echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt
 USER openwrt
 RUN cd /home/openwrt && \
-    git clone https://github.com/lede-project/source.git --branch lede-17.01 openwrt && \
+    git clone https://github.com/lede-project/source.git --branch  f98f83ea openwrt && \
     cd openwrt && \
     ./scripts/feeds update && \
     rm -rf tmp
